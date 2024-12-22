@@ -1,0 +1,16 @@
+set selection-clipboard clipboard
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+
+# One page per row by default
+set pages-per-row 1
+
+#stop at page boundries
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+
+#zoom settings
+set zoom-min 10
+set guioptions "s"
+
+set font "JetBrainsMono Nerd Font 13"
