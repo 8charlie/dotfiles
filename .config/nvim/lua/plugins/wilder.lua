@@ -1,5 +1,6 @@
 return {
-  {
-	    "gelguy/wilder.nvim", build = ":UpdateRemotePlugins"
-   },
+	{
+		"gelguy/wilder.nvim",
+		build = ":UpdateRemotePlugins",
+	},
 }

@@ -18,6 +18,7 @@ font pango:monospace 12
 
 # startup
 exec_always --no-startup-id xclip
+exec_always --no-startup-id autotiling
 
 # launch binds
 bindsym $mod+a exec --no-startup-id rofi -show drun
@@ -38,18 +39,20 @@ bindsym $mod+Shift+f  fullscreen toggle
 bindsym F10 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym F11 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F12 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exit
 # focus window
-bindsym $mod+j focus prev 
-bindsym $mod+k focus next
+bindsym $mod+l focus left 
+bindsym $mod+j focus up 
+bindsym $mod+k focus down
+bindsym $mod+h focus right 
 # resize window
 bindsym $mod+Shift+h resize shrink width 5 px or 5 ppt
 bindsym $mod+Shift+l resize grow width 5 px or 5 ppt
 # move window
-bindsym $mod+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+l move right
+bindsym $mod+Ctrl+h move left
+bindsym $mod+Ctrl+j move down
+bindsym $mod+Ctrl+k move up
+bindsym $mod+Ctrl+l move right
 # move to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2

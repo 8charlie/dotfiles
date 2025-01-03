@@ -49,3 +49,4 @@
 ;; (unpin! t)
 
 (package! denote)
+(package! python-black)

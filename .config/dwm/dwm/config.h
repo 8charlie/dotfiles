@@ -3,9 +3,9 @@
 
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappx     = 18; 				/* gaps between windows */
+static const unsigned int gappx     = 12; 				/* gaps between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMonoNL NFP:size=13:style=Bold",
@@ -15,7 +15,7 @@ static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#3c3836";
 static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#fbf1c7";
-static const char col_cyan[]        = "#d65d0e";
+static const char col_cyan[]        = "#fe8019";
 static const char *colors[][3]      = {
  /*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -46,9 +46,6 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
- 	{ "[@]",      spiral },
- 	{ "[\\]",      dwindle },
 };
 
 /* key definitions */
@@ -65,16 +62,17 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *firefox[]  = { "firefox", NULL };
-static const char *emacs[]    = { "emacs", NULL };
-static const char *yazi[]     = { "st", "-e", "yazi", NULL };
-static const char *nvim[]     = { "st", "-e", "nvim", NULL };
-static const char *spotify[]  = { "spotify-launcher", NULL };
-static const char *vesktop[]  = { "vesktop", NULL };
-static const char *volupcmd[] = { "pamixer", "--increase", "5", NULL }; // Increase volume by 5%
-static const char *voldowncmd[] = { "pamixer", "--decrease", "5", NULL }; // Decrease volume by 5%
+static const char *dmenucmd[]	= { "dmenu_run", NULL };
+static const char *termcmd[]	= { "st", NULL };
+static const char *firefox[]	= { "firefox", NULL };
+static const char *emacs[]	= { "emacs", NULL };
+static const char *yazi[]	= { "st", "-e", "yazi", NULL };
+static const char *nvim[]	= { "st", "-e", "nvim", NULL };
+static const char *spotify[]	= { "spotify-launcher", NULL };
+static const char *vesktop[]	= { "vesktop", NULL };
+static const char *volupcmd[]	= { "pamixer", "--increase", "5", NULL }; 
+static const char *voldowncmd[] = { "pamixer", "--decrease", "5", NULL }; 
+static const char *shutcmd[]	= { "st", "-e", "shutdown", "now", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -88,6 +86,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_d,	   spawn,	   {.v = vesktop } },
         { 0,                            XK_F12,    spawn,          {.v = volupcmd} },
         { 0,                            XK_F11,    spawn,          {.v = voldowncmd} },
+	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = shutcmd} },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
