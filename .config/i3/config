@@ -3,6 +3,7 @@ set $mod Mod4
 set $term kitty
 
 # colorscheme
+
 set $bg #282828
 set $red #cc241d
 set $green #98971a
@@ -14,16 +15,19 @@ set $gray #a89984
 set $darkgray #1d2021
 
 # font
-font pango:monospace 12
+font pango:Firacode Nerd Font 11
 
 # startup
 exec_always --no-startup-id xclip
 exec_always --no-startup-id autotiling
+exec_always --no-startup-id dunst
 
 # launch binds
+bindsym $mod+Shift+b exec ~/Documents/scripts/bluetooth_connect.sh
+bindsym $mod+Shift+p exec ~/Documents/scripts/toggle_script.sh
 bindsym $mod+a exec --no-startup-id rofi -show drun
 bindsym $mod+p exec --no-startup-id flameshot gui
-bindsym $mod+t exec $term
+bindsym $mod+t exec --no-startup-id kitty
 bindsym $mod+e exec $term -e yazi
 bindsym $mod+n exec $term -e nvim
 bindsym $mod+c exec emacs
@@ -82,7 +86,6 @@ focus_follows_mouse yes
 #wincfg
 gaps inner 9
 gaps outer 2
-#default_border pixel 2
 
 #barcfg
 bar {
@@ -94,7 +97,7 @@ bar {
 		# bar background color
 		background $bg
 		# text color used for blocks that do not have a color specified.
-		statusline $yellow
+		#statusline $yellow
 		# workspaces section            
 		#                    border  backgr. text
 		focused_workspace    $aqua $aqua $darkgray
@@ -107,8 +110,8 @@ bar {
 
 # blue gruvbox titlebar
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.focused          $blue $blue $darkgray $blue $blue
+client.focused_inactive $darkgray $darkgray $yellow $darkgray $darkgray
+client.unfocused        $darkgray $darkgray $yellow $darkgray $darkgray
 client.urgent           $red $red $red $red
 
