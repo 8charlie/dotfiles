@@ -90,9 +90,10 @@ gaps outer 2
 #barcfg
 bar {
 	mode dock
-	position top
+	position bottom
 	modifier none
 	status_command i3status-rs ~/.config/i3status-rust/config.toml
+	#status_command i3blocks
     	colors {
 		# bar background color
 		background $bg

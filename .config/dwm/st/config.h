@@ -6,8 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "JetBrainsMonoNL NFP:size=12:style=Bold";
-static char *font2[] = { "NFont Awesome 6 Free Solid:size=12" };
-static int borderpx = 2;
+static char *font2[] = { "JetBrainsMonoNL NFP:size=12:style=Bold" };
+static int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:

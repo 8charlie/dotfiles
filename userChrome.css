@@ -1,16 +1,23 @@
 :root {
-	--tab-active-bg-color: #1d2021;
+/*	--tab-active-bg-color: #32302F;
 	--tab-inactive-bg-color: #333;
-	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
-	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
+	--tab-active-fg-fallback-color: #eee;
+	--tab-inactive-fg-fallback-color: #888;
 	--urlbar-focused-bg-color: #41404c;
 	--urlbar-not-focused-bg-color: #1c1b22;
 	--toolbar-bgcolor: #2b2a33 !important;
-	--tab-font: 'FiraCode Nerd Font Mono';
-	--urlbar-font: 'FiraCode Nerd Font Mono';
+*/
+	--tab-active-bg-color: #32302F;
+	--tab-inactive-bg-color: #282828;
+	--tab-active-fg-fallback-color: #EBDBB2;
+	--tab-inactive-fg-fallback-color:#D5C4A1;
+	--urlbar-focused-bg-color: #41404c;
+	--urlbar-not-focused-bg-color: #1c1b22;
+	--tab-font: 'Ttyp0';
+	--urlbar-font: 'Ttyp0';
 
 	/* try increasing if you encounter problems */
-	--urlbar-height-setting: 24px;
+	--urlbar-height-setting: 22px;
 	--tab-min-height: 22px !important;
 
 	/* I don't recommend you touch this unless you know what you're doing */
@@ -177,7 +184,7 @@ tab:not([selected="true"]) {
 
 tab {
 	font-family: var(--tab-font, monospace);
-	font-weight: bold;
+	font-weight: regular;
 	border: none !important;
 	padding-top: 0 !important;
 }
