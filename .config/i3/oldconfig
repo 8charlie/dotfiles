@@ -1,19 +1,33 @@
 # define important things
 set $mod Mod4
-set $term ghostty
+set $term kitty
+
+# colorscheme
+
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
 
 # font
-#font pango:JetBrainsMono Nerd Font Mono 11
-font pango:monospace 11
+font pango:JetBrainsMono Nerd Font Mono 11
+
 # startup
 exec_always --no-startup-id xclip
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id dunst
 
 # launch binds
+bindsym $mod+Shift+b exec ~/Documents/scripts/bluetooth_connect.sh
+bindsym $mod+Shift+p exec ~/Documents/scripts/toggle_script.sh
 bindsym $mod+a exec --no-startup-id rofi -show drun
 bindsym $mod+p exec --no-startup-id flameshot gui
-bindsym $mod+t exec --no-startup-id $term
+bindsym $mod+t exec --no-startup-id kitty
 bindsym $mod+e exec $term -e yazi
 bindsym $mod+n exec $term -e nvim
 bindsym $mod+c exec emacs
@@ -73,6 +87,32 @@ focus_follows_mouse yes
 gaps inner 9
 gaps outer 2
 
+#barcfg
 bar {
-        status_command i3status
+	mode dock
+	position bottom
+	modifier none
+	status_command i3status-rs ~/.config/i3status-rust/config.toml
+	#status_command i3blocks
+    	colors {
+		# bar background color
+		background $bg
+		# text color used for blocks that do not have a color specified.
+		#statusline $yellow
+		# workspaces section            
+		#                    border  backgr. text
+		focused_workspace    $aqua $aqua $darkgray
+		inactive_workspace   $darkgray $darkgray $yellow
+		active_workspace     $darkgray $darkgray $yellow
+		urgent_workspace     $red $red $bg
+	    }
+
 }
+
+# blue gruvbox titlebar
+# class                 border|backgr|text|indicator|child_border
+client.focused          $blue $blue $darkgray $blue $blue
+client.focused_inactive $darkgray $darkgray $yellow $darkgray $darkgray
+client.unfocused        $darkgray $darkgray $yellow $darkgray $darkgray
+client.urgent           $red $red $red $red
+

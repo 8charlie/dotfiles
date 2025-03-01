@@ -1,3 +1,7 @@
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	startx
+fi
+
 export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="${EDITOR}"
@@ -14,3 +18,5 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
+
+eval "$(starship init zsh)"
