@@ -12,6 +12,6 @@ exec dwm
 
 #exec awesome
 
-#skhd &
+#sxhkd &
 #polybar &
 #exec bspwm

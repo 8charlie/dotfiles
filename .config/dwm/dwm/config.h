@@ -9,30 +9,32 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMonoNerdFontMono:size=11:style=Bold", }; 
 //Font Awesome 6 Free Solid:size=11
 //static const char dmenufont[]       = "monospace:size=13";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#3c3836";
-static const char col_gray3[]       = "#ebdbb2";
-static const char col_gray4[]       = "#fbf1c7";
-static const char col_cyan[]        = "#d65d0e";
-//static const char col_cyan[]        = "#e58928";
-//static const char col_cyan[]        = "#fe8019";
-//
-//static const char col_gray1[]       = "#E0E0E0";
-//static const char col_gray2[]       = "#FFF0F5";
-//static const char col_gray3[]       = "#262626";
-//static const char col_gray4[]       = "#FFFFFF";
-//static const char col_cyan[]        = "#262626";
-//
-//static const char col_gray1[]       = "#2c2843";
-//static const char col_gray2[]       = "#FFF0F5";
-//static const char col_gray3[]       = "#3d77d5";
-//static const char col_gray4[]       = "#FFFFFF";
-//static const char col_cyan[]        = "#3f87eb";
+
+
+// gruvbox
+static const char col_bg1[]       = "#282828";
+static const char col_bg2[]       = "#3c3836";
+static const char col_fg1[]       = "#ebdbb2";
+static const char col_fg2[]       = "#fbf1c7";
+static const char col_main[]        = "#d65d0e";
+
+// gruvbox 2 (laptop)
+//static const char col_main_laptop[]        = "#076678";
+//static const char active_border[]	= "#8cb37b";
+
+// black and white
+//static const char col_bg1[]       = "#E0E0E0";
+//static const char col_bg2[]       = "#FFF0F5";
+//static const char col_fg1[]       = "#262626";
+//static const char col_fg2[]       = "#FFFFFF";
+//static const char col_main[]        = "#262626";
+
+
 static const char *colors[][3]      = {
  /*               	fg          bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
+	[SchemeNorm] = { col_fg1, col_bg1, col_bg1 },
+	[SchemeSel]  = { col_fg2, col_main,  col_main  },
+	[SchemeHid]  = { col_main,  col_bg1, col_main  },
 };
 
 /* tagging */
