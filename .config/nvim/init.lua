@@ -1,7 +1,5 @@
--- set leader key
 vim.g.mapleader = " "
 
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.fn.systemlist("git -C " .. lazypath .. " rev-parse --is-inside-work-tree")[1] == "true") then
 	vim.fn.system({
@@ -15,34 +13,27 @@ if not (vim.fn.systemlist("git -C " .. lazypath .. " rev-parse --is-inside-work-
 end
 vim.opt.rtp:prepend(lazypath)
 
--- set plugins folder
 require("lazy").setup("plugins")
 
--- plugin cutomizations
+-- theme
 vim.cmd.colorscheme("gruvbox") -- theme
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" }) -- removes background for transparency
 
 -- sets tab to 4 spaces
--- vim.o.expandtab = false
--- vim.o.tabstop = 4
--- vim.o.shiftwidth = 4
+vim.o.expandtab = false
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 
--- non-plugin options
-vim.wo.relativenumber = true -- adds relative line numbers
-
--- search alterations
+vim.wo.relativenumber = true
 vim.opt.ignorecase = true -- search is case insensitive
 vim.opt.smartcase = true -- search matters if capital letter
 vim.opt.inccommand = "split" -- previews what youll replace stuff with during replace
 
--- start of keybinds
+-- keybinds
 local keyset = vim.keymap.set
-vim.opt.splitbelow = true -- split windows below
-vim.opt.splitright = true -- split windows right
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
--- non-plugins binds
-keyset("n", "<leader>dv", vim.cmd.Ex)
-keyset("n", "<leader>ex", ":Ex<cr>")
 keyset("n", "<leader>rc", ":%s/<C-r><C-w>//g<Left><Left>") -- replace under cursor
 keyset("n", "<down>", ":resize +2<cr>") -- resizes windows
 keyset("n", "<up>", ":resize -2<cr>")
@@ -64,3 +55,6 @@ keyset("n", "<leader>fh", function()
 	require("telescope.builtin").find_files({ hidden = true })
 end)
 keyset("n", "<leader>fg", ":Telescope live_grep<cr>")
+
+-- mini binds
+keyset("n", "<leader>fe", ":lua MiniFiles.open()<cr>")

@@ -12,6 +12,7 @@ return {
 				ensure_installed = {
 					"lua",
 					"python",
+					"markdown",
 				},
 			})
 		end,

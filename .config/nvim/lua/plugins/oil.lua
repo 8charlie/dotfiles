@@ -8,6 +8,6 @@ return {
 		-- Optional dependencies
 		dependencies = { { "echasnovski/mini.icons", opts = {} } },
 		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
-		vim.keymap.set("n", "<leader>fe", ":Oil<cr>"),
+		-- vim.keymap.set("n", "<leader>fe", ":Oil<cr>"),
 	},
 }

@@ -1,0 +1,12 @@
+[font.normal]
+family = "Cascadia Mono"
+style = "Regular"
+
+[window]
+opacity = 0.8
+decorations = "none"
+dynamic_padding = true
+
+[window.padding]
+x = 5
+y = 5
