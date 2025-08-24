@@ -11,8 +11,6 @@ return {
 				sync_install = true,
 				ensure_installed = {
 					"lua",
-					"python",
-					"markdown",
 				},
 			})
 		end,

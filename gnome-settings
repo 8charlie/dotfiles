@@ -1,0 +1,274 @@
+[Characters]
+recent-characters=['–']
+
+[Extensions]
+window-height=1032
+window-maximized=false
+window-width=948
+
+[Ptyxis]
+default-profile-uuid='219a5924934190e0599c214068a5c44f'
+profile-uuids=['219a5924934190e0599c214068a5c44f']
+window-size=(uint32 80, uint32 24)
+
+[calendar]
+active-view='month'
+window-maximized=true
+window-size=(768, 600)
+
+[control-center]
+last-panel='universal-access'
+window-state=(948, 1032, false)
+
+[desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+
+[desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[desktop/app-folders/folders/System]
+apps=['org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Logs.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.freedesktop.GnomeAbrt.desktop', 'org.gnome.SystemMonitor.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[desktop/app-folders/folders/Utilities]
+apps=['org.gnome.Connections.desktop', 'org.gnome.Evince.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[desktop/background]
+picture-options='zoom'
+picture-uri='file:///home/charlie/.config/background'
+picture-uri-dark='file:///home/charlie/.config/background'
+
+[desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'us')]
+
+[desktop/interface]
+accent-color='yellow'
+color-scheme='prefer-dark'
+enable-animations=false
+text-scaling-factor=1.0
+toolkit-accessibility=false
+
+[desktop/notifications]
+application-children=['org-freedesktop-problems-applet', 'org-gnome-software', 'vesktop', 'org-mozilla-firefox', 'org-gnome-settings', 'spotify', 'steam', 'gnome-power-panel', 'discord']
+
+[desktop/notifications/application/discord]
+application-id='discord.desktop'
+
+[desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/org-freedesktop-problems-applet]
+application-id='org.freedesktop.problems.applet.desktop'
+
+[desktop/notifications/application/org-gnome-settings]
+application-id='org.gnome.Settings.desktop'
+
+[desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-mozilla-firefox]
+application-id='org.mozilla.firefox.desktop'
+
+[desktop/notifications/application/spotify]
+application-id='spotify.desktop'
+
+[desktop/notifications/application/steam]
+application-id='steam.desktop'
+
+[desktop/notifications/application/vesktop]
+application-id='vesktop.desktop'
+
+[desktop/privacy]
+report-technical-problems=false
+
+[desktop/session]
+idle-delay=uint32 480
+
+[desktop/wm/keybindings]
+close=['<Super>q']
+minimize=['<Super>m']
+move-to-workspace-1=['<Shift><Super>1']
+move-to-workspace-2=['<Shift><Super>2']
+move-to-workspace-3=['<Shift><Super>3']
+move-to-workspace-4=['<Shift><Super>4']
+move-to-workspace-5=['<Shift><Super>5']
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-5=['<Super>5']
+toggle-maximized=@as []
+
+[desktop/wm/preferences]
+num-workspaces=5
+
+[evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='links'
+sidebar-size=148
+sizing-mode='automatic'
+
+[evolution-data-server]
+migrated=true
+
+[gnome-system-monitor]
+current-tab='processes'
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-height=1032
+window-width=948
+
+[gnome-system-monitor/proctree]
+col-26-visible=false
+col-26-width=0
+
+[login-screen]
+enable-fingerprint-authentication=true
+enable-smartcard-authentication=false
+
+[mutter]
+dynamic-workspaces=false
+edge-tiling=false
+
+[nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[nautilus/window-state]
+initial-size=(1904, 1032)
+initial-size-file-chooser=(890, 550)
+
+[portal/filechooser/codium]
+last-folder-path='/home/charlie/Documents/work/http-java/codecrafters-http-server-java'
+
+[portal/filechooser/io.freetubeapp.FreeTube]
+last-folder-path='/home/charlie/Documents/vault/other'
+
+[portal/filechooser/vesktop]
+last-folder-path='/home/charlie/Downloads'
+
+[settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+
+[settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+email=@as []
+home=@as []
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>f'
+command='firefox'
+name='firefox'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>t'
+command='alacritty -e tmux'
+name='tmux alacritty'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>d'
+command='vesktop'
+name='vesktop'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>e'
+command='alacritty -e yazi'
+name='yazi'
+
+[settings-daemon/plugins/power]
+power-button-action='interactive'
+sleep-inactive-ac-type='nothing'
+
+[shell]
+app-picker-layout=[{'Alacritty.desktop': <{'position': <0>}>, 'org.gnome.Contacts.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <5>}>, 'simple-scan.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Boxes.desktop': <{'position': <8>}>, 'org.gnome.Totem.desktop': <{'position': <9>}>, 'org.gnome.Snapshot.desktop': <{'position': <10>}>, 'org.gnome.Characters.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'libreoffice-calc.desktop': <{'position': <14>}>, 'org.gnome.Tour.desktop': <{'position': <15>}>, 'yelp.desktop': <{'position': <16>}>, 'libreoffice-impress.desktop': <{'position': <17>}>, 'libreoffice-writer.desktop': <{'position': <18>}>, 'nvim.desktop': <{'position': <19>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <20>}>, 'org.gnome.Ptyxis.desktop': <{'position': <21>}>, 'org.gnome.Extensions.desktop': <{'position': <22>}>, 'gparted.desktop': <{'position': <23>}>}, {'lpf.desktop': <{'position': <0>}>, 'lpf-spotify-client.desktop': <{'position': <1>}>, 'lpf-gui.desktop': <{'position': <2>}>, 'lpf-notify.desktop': <{'position': <3>}>, 'nvidia-settings.desktop': <{'position': <4>}>, 'spotify.desktop': <{'position': <5>}>, 'syncthing-start.desktop': <{'position': <6>}>, 'syncthing-ui.desktop': <{'position': <7>}>, 'org.gnome.tweaks.desktop': <{'position': <8>}>, 'vesktop.desktop': <{'position': <9>}>, 'codium.desktop': <{'position': <10>}>, 'WoeUSB-ng.desktop': <{'position': <11>}>, 'org.pwmt.zathura.desktop': <{'position': <12>}>}]
+disable-user-extensions=false
+disabled-extensions=['background-logo@fedorahosted.org']
+enabled-extensions=['pop-shell@system76.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'impatience@gfxmonk.net', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu']
+last-selected-power-profile='performance'
+welcome-dialog-last-shown-version='48.0'
+
+[shell/extensions/blur-my-shell]
+settings-version=2
+
+[shell/extensions/blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[shell/extensions/blur-my-shell/applications]
+blur=true
+dynamic-opacity=false
+opacity=195
+sigma=17
+whitelist=['Alacritty', 'Alacritty']
+
+[shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/dash-to-dock]
+blur=true
+brightness=0.59999999999999998
+pipeline='pipeline_default_rounded'
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/panel]
+brightness=0.59999999999999998
+pipeline='pipeline_default'
+sigma=30
+
+[shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[shell/extensions/net/gfxmonk/impatience]
+speed-factor=0.0
+
+[shell/extensions/pop-shell]
+show-title=false
+tile-by-default=true
+
+[shell/world-clocks]
+locations=@av []
+
+[software]
+check-timestamp=int64 1755942524
+first-run=false
+flatpak-purge-timestamp=int64 1755949652
+packagekit-historical-updates-timestamp=uint64 1755892299
+security-timestamp=int64 1755694390800630
+update-notification-timestamp=int64 1755771199
+
+[system/location]
+enabled=false
+
+[tweaks]
+show-extensions-notice=false

@@ -1,0 +1,46 @@
+#!/usr/bin/env sh
+
+# yabai startup stuff
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# sets split ratio
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance on
+
+# layout (float or bsp)
+yabai -m config layout bsp
+
+# New window spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
+
+# Set all padding and gaps to 20pt (default: 0)
+yabai -m config top_padding    9
+yabai -m config bottom_padding 9
+yabai -m config left_padding   12
+yabai -m config right_padding  12
+yabai -m config window_gap     12
+
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier alt
+
+# auto focus with hover
+yabai -m config focus_follows_mouse autofocus
+
+# follows mouse
+yabai -m config mouse_follows_focus on
+
+# resize with mouse 
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+# window opacity (default: off)
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.85
+yabai -m rule --add app="^Spotify$" opacity=0.80
+
+# ghostty doesnt split window when making a new tab
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+

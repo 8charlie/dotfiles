@@ -1,9 +1,6 @@
 return {
 	"stevearc/conform.nvim",
 	opts = {
-		formatters_by_ft = {
-			lua = { "stylua" },
-		},
 		format_on_save = {
 			lsp_fallback = true, -- Use LSP formatting if no formatter is available
 			async = false, -- Synchronous formatting
