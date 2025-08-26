@@ -33,8 +33,8 @@ vim.o.splitright = true
 
 vim.diagnostic.config({
 	virtual_text = {
-		prefix = "●", -- Symbol before the diagnostic message
-		source = false, -- Show source of the diagnostic message
+		prefix = "●",
+		source = false,
 	},
 })
 
