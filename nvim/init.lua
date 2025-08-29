@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- theme
-vim.cmd.colorscheme("gruvbox")                    -- theme
+vim.cmd.colorscheme("catppuccin")                 -- theme
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" }) -- removes background for transparency
 
 -- sets tab to 4 spaces
@@ -52,11 +52,12 @@ keyset("n", ",h", "<c-w>h") -- switch between windows
 keyset("n", ",j", "<c-w>j")
 keyset("n", ",k", "<c-w>k")
 keyset("n", ",l", "<c-w>l")
-keyset("n", "<TAB>", ":bnext<cr>")                 -- next buffer
-keyset("n", "<S-TAB>", ":bprevious<cr>")           -- previous buffer
-keyset("n", "<leader>b", ":Telescope buffers<cr>") -- show all opened buffers in telescope
-keyset("n", "<C-d>", "<C-d>zz")                    -- centers screen after ctrl d
-keyset("n", "<C-u>", "<C-u>zz")                    -- centers screen after ctrl u
+keyset("n", "<TAB>", ":bnext<cr>")                               -- next buffer
+keyset("n", "<S-TAB>", ":bprevious<cr>")                         -- previous buffer
+keyset("n", "<leader>b", ":lua vim.diagnostic.open_float<cr>")   -- open floating window for error/warnings
+keyset("n", "<leader>n", ":lua vim.diagnostic.setloclist()<cr>") -- show all errors
+keyset("n", "<C-d>", "<C-d>zz")                                  -- centers screen after ctrl d
+keyset("n", "<C-u>", "<C-u>zz")                                  -- centers screen after ctrl u
 
 -- telescope binds
 --keyset("n", "<leader>f", ":Telescope find_files<cr>")
