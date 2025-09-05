@@ -15,11 +15,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    9
-yabai -m config bottom_padding 9
-yabai -m config left_padding   12
-yabai -m config right_padding  12
-yabai -m config window_gap     12
+yabai -m config top_padding    6
+yabai -m config bottom_padding 6 
+yabai -m config left_padding   6 
+yabai -m config right_padding  6 
+yabai -m config window_gap     6 
 
 # set mouse interaction modifier key (default: fn)
 yabai -m config mouse_modifier alt
@@ -27,7 +27,7 @@ yabai -m config mouse_modifier alt
 # auto focus with hover
 yabai -m config focus_follows_mouse autofocus
 
-# follows mouse
+# focus follows mouse
 yabai -m config mouse_follows_focus on
 
 # resize with mouse 
@@ -39,8 +39,3 @@ yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.85
 yabai -m rule --add app="^Spotify$" opacity=0.80
-
-# ghostty doesnt split window when making a new tab
-yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
-yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
-

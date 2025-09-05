@@ -2,11 +2,21 @@
 family = "Cascadia Mono"
 style = "Regular"
 
+[font]
+size = 14
+
 [window]
-opacity = 0.8
+opacity = 0.3
 decorations = "none"
 dynamic_padding = true
+blur = true
 
 [window.padding]
-x = 5
+x = 15
 y = 5
+
+[general]
+import = [
+	"~/.config/alacritty/themes/catppuccin_frappe.toml"
+]
+

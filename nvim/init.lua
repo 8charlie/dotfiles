@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- theme
-vim.cmd.colorscheme("catppuccin")                 -- theme
+vim.cmd.colorscheme("catppuccin-frappe")          -- theme
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" }) -- removes background for transparency
 
 -- sets tab to 4 spaces
@@ -41,10 +41,10 @@ vim.diagnostic.config({
 -- keybinds
 local keyset = vim.keymap.set
 
-keyset("n", "<leader>rc", ":%s/<C-r><C-w>//g<Left><Left>") -- replace under cursor
 keyset({ 'n', 'v' }, '<leader>y', '"+y')
 keyset({ 'n', 'v' }, '<leader>d', '"+d')
-keyset("n", "<down>", ":resize +2<cr>") -- resizes windows
+keyset("n", "<leader>rc", ":%s/<C-r><C-w>//g<Left><Left>") -- replace under cursor
+keyset("n", "<down>", ":resize +2<cr>")                    -- resizes windows
 keyset("n", "<up>", ":resize -2<cr>")
 keyset("n", "<right>", ":vertical resize +2<cr>")
 keyset("n", "<left>", ":vertical resize -2<cr>")
@@ -54,18 +54,13 @@ keyset("n", ",k", "<c-w>k")
 keyset("n", ",l", "<c-w>l")
 keyset("n", "<TAB>", ":bnext<cr>")                               -- next buffer
 keyset("n", "<S-TAB>", ":bprevious<cr>")                         -- previous buffer
-keyset("n", "<leader>b", ":lua vim.diagnostic.open_float<cr>")   -- open floating window for error/warnings
-keyset("n", "<leader>n", ":lua vim.diagnostic.setloclist()<cr>") -- show all errors
 keyset("n", "<C-d>", "<C-d>zz")                                  -- centers screen after ctrl d
 keyset("n", "<C-u>", "<C-u>zz")                                  -- centers screen after ctrl u
+keyset("n", "<leader>b", ":lua vim.diagnostic.open_float<cr>")   -- open floating window for error/warnings
+keyset("n", "<leader>n", ":lua vim.diagnostic.setloclist()<cr>") -- show all errors
+keyset("n", "<leader>d", ":put =strftime('%d/%m/%y %H:%M')<cr>")
 
--- telescope binds
---keyset("n", "<leader>f", ":Telescope find_files<cr>")
---keyset("n", "<leader>fh", function()
---	require("telescope.builtin").find_files({ hidden = true })
---end)
+-- plugin binds
 keyset("n", "<leader>g", ":Telescope live_grep<cr>")
-
--- mini binds
 keyset("n", "<leader>f", ":lua MiniFiles.open()<cr>")
 keyset("n", "<leader>e", ":Pick files<cr>")
