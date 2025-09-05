@@ -17,8 +17,8 @@ window-maximized=true
 window-size=(768, 600)
 
 [control-center]
-last-panel='universal-access'
-window-state=(948, 1032, false)
+last-panel='keyboard'
+window-state=(1904, 1032, false)
 
 [desktop/app-folders]
 folder-children=['System', 'Utilities', 'YaST', 'Pardus']
@@ -60,7 +60,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['org-freedesktop-problems-applet', 'org-gnome-software', 'vesktop', 'org-mozilla-firefox', 'org-gnome-settings', 'spotify', 'steam', 'gnome-power-panel', 'discord']
+application-children=['org-freedesktop-problems-applet', 'org-gnome-software', 'vesktop', 'org-mozilla-firefox', 'org-gnome-settings', 'spotify', 'steam', 'gnome-power-panel', 'discord', 'librewolf', 'org-gnome-nautilus', 'org-gnome-tweaks']
 
 [desktop/notifications/application/discord]
 application-id='discord.desktop'
@@ -68,14 +68,23 @@ application-id='discord.desktop'
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
+[desktop/notifications/application/librewolf]
+application-id='librewolf.desktop'
+
 [desktop/notifications/application/org-freedesktop-problems-applet]
 application-id='org.freedesktop.problems.applet.desktop'
+
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
 
 [desktop/notifications/application/org-gnome-settings]
 application-id='org.gnome.Settings.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
 
 [desktop/notifications/application/org-mozilla-firefox]
 application-id='org.mozilla.firefox.desktop'
@@ -134,7 +143,7 @@ maximized=false
 show-dependencies=false
 show-whose-processes='user'
 window-height=1032
-window-width=948
+window-width=1904
 
 [gnome-system-monitor/proctree]
 col-26-visible=false
@@ -154,7 +163,7 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
 [nautilus/window-state]
-initial-size=(1904, 1032)
+initial-size=(948, 1032)
 initial-size-file-chooser=(890, 550)
 
 [portal/filechooser/codium]
@@ -176,8 +185,8 @@ home=@as []
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>f'
-command='firefox'
-name='firefox'
+command='librewolf'
+name='librewolf'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>t'
@@ -201,10 +210,13 @@ sleep-inactive-ac-type='nothing'
 [shell]
 app-picker-layout=[{'Alacritty.desktop': <{'position': <0>}>, 'org.gnome.Contacts.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <5>}>, 'simple-scan.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Boxes.desktop': <{'position': <8>}>, 'org.gnome.Totem.desktop': <{'position': <9>}>, 'org.gnome.Snapshot.desktop': <{'position': <10>}>, 'org.gnome.Characters.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'libreoffice-calc.desktop': <{'position': <14>}>, 'org.gnome.Tour.desktop': <{'position': <15>}>, 'yelp.desktop': <{'position': <16>}>, 'libreoffice-impress.desktop': <{'position': <17>}>, 'libreoffice-writer.desktop': <{'position': <18>}>, 'nvim.desktop': <{'position': <19>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <20>}>, 'org.gnome.Ptyxis.desktop': <{'position': <21>}>, 'org.gnome.Extensions.desktop': <{'position': <22>}>, 'gparted.desktop': <{'position': <23>}>}, {'lpf.desktop': <{'position': <0>}>, 'lpf-spotify-client.desktop': <{'position': <1>}>, 'lpf-gui.desktop': <{'position': <2>}>, 'lpf-notify.desktop': <{'position': <3>}>, 'nvidia-settings.desktop': <{'position': <4>}>, 'spotify.desktop': <{'position': <5>}>, 'syncthing-start.desktop': <{'position': <6>}>, 'syncthing-ui.desktop': <{'position': <7>}>, 'org.gnome.tweaks.desktop': <{'position': <8>}>, 'vesktop.desktop': <{'position': <9>}>, 'codium.desktop': <{'position': <10>}>, 'WoeUSB-ng.desktop': <{'position': <11>}>, 'org.pwmt.zathura.desktop': <{'position': <12>}>}]
 disable-user-extensions=false
-disabled-extensions=['background-logo@fedorahosted.org']
-enabled-extensions=['pop-shell@system76.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'impatience@gfxmonk.net', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu']
+disabled-extensions=['background-logo@fedorahosted.org', 'openbar@neuromorph']
+enabled-extensions=['pop-shell@system76.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='48.0'
+
+[shell/extensions/auto-move-windows]
+application-list=['librewolf.desktop:1', 'vesktop.desktop:3', 'spotify.desktop:4', 'steam.desktop:2', 'discord.desktop:3']
 
 [shell/extensions/blur-my-shell]
 settings-version=2
@@ -252,20 +264,86 @@ sigma=30
 [shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.0
 
+[shell/extensions/openbar]
+bg-change=true
+bguri='file:///home/charlie/.config/background'
+count1=230703
+count10=1279
+count11=385
+count12=81
+count2=125628
+count3=90084
+count4=37694
+count5=36389
+count6=20815
+count7=10489
+count8=7040
+count9=1413
+dark-bguri='file:///home/charlie/.config/background'
+dark-palette1=['4', '100', '124']
+dark-palette10=['75', '68', '68']
+dark-palette11=['185', '112', '20']
+dark-palette12=['76', '140', '128']
+dark-palette2=['234', '222', '185']
+dark-palette3=['123', '156', '140']
+dark-palette4=['67', '117', '90']
+dark-palette5=['58', '57', '51']
+dark-palette6=['230', '175', '41']
+dark-palette7=['140', '190', '126']
+dark-palette8=['69', '132', '140']
+dark-palette9=['172', '156', '125']
+default-font='Sans 12'
+import-export=false
+light-bguri='file:///home/charlie/.config/background'
+light-palette1=['4', '100', '124']
+light-palette10=['75', '68', '68']
+light-palette11=['185', '112', '20']
+light-palette12=['76', '140', '128']
+light-palette2=['234', '222', '185']
+light-palette3=['123', '156', '140']
+light-palette4=['67', '117', '90']
+light-palette5=['58', '57', '51']
+light-palette6=['230', '175', '41']
+light-palette7=['140', '190', '126']
+light-palette8=['69', '132', '140']
+light-palette9=['172', '156', '125']
+monitor-height=1080
+monitor-width=1920
+palette1=['4', '100', '124']
+palette10=['75', '68', '68']
+palette11=['185', '112', '20']
+palette12=['76', '140', '128']
+palette2=['234', '222', '185']
+palette3=['123', '156', '140']
+palette4=['67', '117', '90']
+palette5=['58', '57', '51']
+palette6=['230', '175', '41']
+palette7=['140', '190', '126']
+palette8=['69', '132', '140']
+palette9=['172', '156', '125']
+pause-reload=false
+reloadstyle=true
+
 [shell/extensions/pop-shell]
+pop-monitor-left=@as []
+pop-monitor-right=@as []
+pop-workspace-up=@as []
 show-title=false
 tile-by-default=true
+
+[shell/extensions/user-theme]
+name=''
 
 [shell/world-clocks]
 locations=@av []
 
 [software]
-check-timestamp=int64 1755942524
+check-timestamp=int64 1757067369
 first-run=false
-flatpak-purge-timestamp=int64 1755949652
-packagekit-historical-updates-timestamp=uint64 1755892299
+flatpak-purge-timestamp=int64 1757062188
+packagekit-historical-updates-timestamp=uint64 1756067763
 security-timestamp=int64 1755694390800630
-update-notification-timestamp=int64 1755771199
+update-notification-timestamp=int64 1756114169
 
 [system/location]
 enabled=false

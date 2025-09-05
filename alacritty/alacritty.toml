@@ -2,21 +2,18 @@
 family = "Cascadia Mono"
 style = "Regular"
 
-[font]
-size = 14
-
 [window]
-opacity = 0.3
+opacity = 0.8
 decorations = "none"
 dynamic_padding = true
 blur = true
 
 [window.padding]
-x = 15
+x = 5
 y = 5
 
 [general]
 import = [
-	"~/.config/alacritty/themes/catppuccin_frappe.toml"
+	"~/.config/alacritty/themes/gruvbox.toml"
 ]
 
