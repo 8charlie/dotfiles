@@ -17,8 +17,8 @@ window-maximized=true
 window-size=(768, 600)
 
 [control-center]
-last-panel='keyboard'
-window-state=(1904, 1032, false)
+last-panel='bluetooth'
+window-state=(948, 512, false)
 
 [desktop/app-folders]
 folder-children=['System', 'Utilities', 'YaST', 'Pardus']
@@ -44,9 +44,15 @@ name='suse-yast.directory'
 translate=true
 
 [desktop/background]
+color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/charlie/.config/background'
-picture-uri-dark='file:///home/charlie/.config/background'
+picture-uri='file:///home/charlie/.local/share/backgrounds/2025-09-05-14-33-11-Birmingham_Museums_Trust_Unsplash.jpg'
+picture-uri-dark='file:///home/charlie/.local/share/backgrounds/2025-09-05-14-33-11-Birmingham_Museums_Trust_Unsplash.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[desktop/datetime]
+automatic-timezone=false
 
 [desktop/input-sources]
 current=uint32 0
@@ -56,14 +62,18 @@ sources=[('xkb', 'us')]
 accent-color='yellow'
 color-scheme='prefer-dark'
 enable-animations=false
+gtk-theme='Adwaita'
 text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['org-freedesktop-problems-applet', 'org-gnome-software', 'vesktop', 'org-mozilla-firefox', 'org-gnome-settings', 'spotify', 'steam', 'gnome-power-panel', 'discord', 'librewolf', 'org-gnome-nautilus', 'org-gnome-tweaks']
+application-children=['org-freedesktop-problems-applet', 'org-gnome-software', 'vesktop', 'org-mozilla-firefox', 'org-gnome-settings', 'spotify', 'steam', 'gnome-power-panel', 'discord', 'librewolf', 'org-gnome-nautilus', 'org-gnome-tweaks', 'org-gnome-extensions', 'firefox-esr', 'org-gnome-evolution']
 
 [desktop/notifications/application/discord]
 application-id='discord.desktop'
+
+[desktop/notifications/application/firefox-esr]
+application-id='firefox-esr.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
@@ -73,6 +83,12 @@ application-id='librewolf.desktop'
 
 [desktop/notifications/application/org-freedesktop-problems-applet]
 application-id='org.freedesktop.problems.applet.desktop'
+
+[desktop/notifications/application/org-gnome-evolution]
+application-id='org.gnome.Evolution.desktop'
+
+[desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
 
 [desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -101,25 +117,47 @@ application-id='vesktop.desktop'
 [desktop/privacy]
 report-technical-problems=false
 
+[desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/charlie/.local/share/backgrounds/2025-09-05-14-33-11-Birmingham_Museums_Trust_Unsplash.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
 [desktop/session]
 idle-delay=uint32 480
 
 [desktop/wm/keybindings]
-close=['<Super>q']
+close=['<Super>q', '<Alt>F4']
+maximize=@as []
 minimize=['<Super>m']
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
 move-to-workspace-1=['<Shift><Super>1']
 move-to-workspace-2=['<Shift><Super>2']
 move-to-workspace-3=['<Shift><Super>3']
 move-to-workspace-4=['<Shift><Super>4']
 move-to-workspace-5=['<Shift><Super>5']
+move-to-workspace-down=@as []
+move-to-workspace-up=@as []
 switch-to-workspace-1=['<Super>1']
 switch-to-workspace-2=['<Super>2']
 switch-to-workspace-3=['<Super>3']
 switch-to-workspace-4=['<Super>4']
 switch-to-workspace-5=['<Super>5']
-toggle-maximized=@as []
+switch-to-workspace-down=['<Primary><Super>Down', '<Primary><Super>j']
+switch-to-workspace-left=@as []
+switch-to-workspace-right=@as []
+switch-to-workspace-up=['<Primary><Super>Up', '<Primary><Super>k']
+toggle-fullscreen=['<Shift><Super>f']
+unmaximize=@as []
 
 [desktop/wm/preferences]
+auto-raise=false
+button-layout='appmenu:close'
+focus-mode='click'
 num-workspaces=5
 
 [evince/default]
@@ -130,12 +168,43 @@ enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
 show-sidebar=true
-sidebar-page='links'
+sidebar-page='thumbnails'
 sidebar-size=148
 sizing-mode='automatic'
 
 [evolution-data-server]
 migrated=true
+
+[evolution]
+version='3.56.1'
+
+[evolution/calendar]
+week-start-day-name='monday'
+work-day-friday=true
+work-day-monday=true
+work-day-saturday=false
+work-day-sunday=false
+work-day-thursday=true
+work-day-tuesday=true
+work-day-wednesday=true
+
+[evolution/mail]
+browser-close-on-reply-policy='ask'
+forward-style-name='attached'
+image-loading-policy='never'
+paned-size=1117419
+reply-style-name='quoted'
+to-do-bar-width=1150000
+
+[evolution/shell]
+default-component-id='mail'
+
+[evolution/shell/window]
+height=985
+maximized=false
+width=948
+x=964
+y=40
 
 [gnome-system-monitor]
 current-tab='processes'
@@ -156,6 +225,14 @@ enable-smartcard-authentication=false
 [mutter]
 dynamic-workspaces=false
 edge-tiling=false
+workspaces-only-on-primary=true
+
+[mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[mutter/wayland/keybindings]
+restore-shortcuts=@as []
 
 [nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -165,23 +242,35 @@ search-filter-time-type='last_modified'
 [nautilus/window-state]
 initial-size=(948, 1032)
 initial-size-file-chooser=(890, 550)
+maximized=false
 
 [portal/filechooser/codium]
-last-folder-path='/home/charlie/Documents/work/http-java/codecrafters-http-server-java'
+last-folder-path='/home/charlie/Documents/work/codecrafters-bittorrent-python'
+
+[portal/filechooser/freetube]
+last-folder-path='/home/charlie/Documents/vault/other'
 
 [portal/filechooser/io.freetubeapp.FreeTube]
 last-folder-path='/home/charlie/Documents/vault/other'
+
+[portal/filechooser/org.gnome.Settings]
+last-folder-path='/home/charlie/Documents/vault/wallpaper'
 
 [portal/filechooser/vesktop]
 last-folder-path='/home/charlie/Downloads'
 
 [settings-daemon/plugins/color]
+night-light-enabled=true
 night-light-schedule-automatic=false
+night-light-schedule-to=4.0
+night-light-temperature=uint32 2700
 
 [settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
-email=@as []
-home=@as []
+rotate-video-lock-static=@as []
+screensaver=@as []
+terminal=['<Super>t']
+www=['<Super>b']
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>f'
@@ -211,9 +300,13 @@ sleep-inactive-ac-type='nothing'
 app-picker-layout=[{'Alacritty.desktop': <{'position': <0>}>, 'org.gnome.Contacts.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <5>}>, 'simple-scan.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Boxes.desktop': <{'position': <8>}>, 'org.gnome.Totem.desktop': <{'position': <9>}>, 'org.gnome.Snapshot.desktop': <{'position': <10>}>, 'org.gnome.Characters.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'libreoffice-calc.desktop': <{'position': <14>}>, 'org.gnome.Tour.desktop': <{'position': <15>}>, 'yelp.desktop': <{'position': <16>}>, 'libreoffice-impress.desktop': <{'position': <17>}>, 'libreoffice-writer.desktop': <{'position': <18>}>, 'nvim.desktop': <{'position': <19>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <20>}>, 'org.gnome.Ptyxis.desktop': <{'position': <21>}>, 'org.gnome.Extensions.desktop': <{'position': <22>}>, 'gparted.desktop': <{'position': <23>}>}, {'lpf.desktop': <{'position': <0>}>, 'lpf-spotify-client.desktop': <{'position': <1>}>, 'lpf-gui.desktop': <{'position': <2>}>, 'lpf-notify.desktop': <{'position': <3>}>, 'nvidia-settings.desktop': <{'position': <4>}>, 'spotify.desktop': <{'position': <5>}>, 'syncthing-start.desktop': <{'position': <6>}>, 'syncthing-ui.desktop': <{'position': <7>}>, 'org.gnome.tweaks.desktop': <{'position': <8>}>, 'vesktop.desktop': <{'position': <9>}>, 'codium.desktop': <{'position': <10>}>, 'WoeUSB-ng.desktop': <{'position': <11>}>, 'org.pwmt.zathura.desktop': <{'position': <12>}>}]
 disable-user-extensions=false
 disabled-extensions=['background-logo@fedorahosted.org', 'openbar@neuromorph']
-enabled-extensions=['pop-shell@system76.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['pop-shell@system76.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'dash2dock-lite@icedman.github.com']
+favorite-apps=@as []
 last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='48.0'
+
+[shell/app-switcher]
+current-workspace-only=true
 
 [shell/extensions/auto-move-windows]
 application-list=['librewolf.desktop:1', 'vesktop.desktop:3', 'spotify.desktop:4', 'steam.desktop:2', 'discord.desktop:3']
@@ -260,6 +353,45 @@ pipeline='pipeline_default'
 [shell/extensions/blur-my-shell/window-list]
 brightness=0.59999999999999998
 sigma=30
+
+[shell/extensions/dash-to-dock]
+apply-custom-theme=false
+autohide-in-fullscreen=false
+background-opacity=0.0
+custom-theme-shrink=false
+dash-max-icon-size=38
+dock-fixed=false
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+hot-keys=false
+intellihide-mode='FOCUS_APPLICATION_WINDOWS'
+max-alpha=0.80000000000000004
+preferred-monitor=-2
+preferred-monitor-by-connector='DP-2'
+require-pressure-to-show=false
+running-indicator-style='DOTS'
+show-dock-urgent-notify=true
+transparency-mode='DEFAULT'
+
+[shell/extensions/dash2dock-lite]
+animation-bounce=0.40000000000000002
+animation-magnify=0.050000000000000003
+animation-rise=0.25
+animation-spread=0.48999999999999999
+autohide-dash=true
+autohide-speed=0.73999999999999999
+blur-resolution=3
+border-radius=3.0
+dock-padding=0.5
+icon-spacing=0.5
+items-pullout-angle=0.5
+msg-to-ext=''
+open-app-animation=false
+preferred-monitor=0
+pressure-sense=false
+pressure-sense-sensitivity=0.40000000000000002
+scroll-sensitivity=0.40000000000000002
+shrink-icons=true
 
 [shell/extensions/net/gfxmonk/impatience]
 speed-factor=0.0
@@ -334,16 +466,25 @@ tile-by-default=true
 [shell/extensions/user-theme]
 name=''
 
+[shell/keybindings]
+open-application-menu=@as []
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+toggle-message-tray=['<Super>v']
+toggle-overview=@as []
+
 [shell/world-clocks]
 locations=@av []
 
 [software]
-check-timestamp=int64 1757067369
+check-timestamp=int64 1757505432
 first-run=false
 flatpak-purge-timestamp=int64 1757062188
 packagekit-historical-updates-timestamp=uint64 1756067763
 security-timestamp=int64 1755694390800630
-update-notification-timestamp=int64 1756114169
+update-notification-timestamp=int64 1757163831
 
 [system/location]
 enabled=false

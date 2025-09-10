@@ -13,4 +13,4 @@ set fish_cursor_default block
 set fish_cursor_insert line
 
 alias vim=nvim
-
+alias fd=fdfind
